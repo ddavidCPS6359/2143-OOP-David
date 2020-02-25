@@ -32,6 +32,14 @@
                                                              
  
 */
+
+
+
+
+
+
+
+
 #include "termio.h"
 #include <algorithm> // std::random_shuffle
 #include <iostream>
@@ -221,7 +229,7 @@ void CardContainer::Add(Card *card) {
     // allow go over 52 ??
 
     Cards.push_back(card);
-    //currentCount = Cards.size();
+    currentCount = Cards.size();
 }
 
 bool CardContainer::isEmpty() {
@@ -322,11 +330,13 @@ void Deck::Print(int columns = 1, bool clear = false) {
 
 class Hand {
 private:
-    int count = 6;
+    int count;
 protected:
 public:
     Hand();
     void Print();
+    void addCard();
+    int returnCard(&int);
 };
 
 void Hand::Print() {
