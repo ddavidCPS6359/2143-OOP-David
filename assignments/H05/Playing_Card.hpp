@@ -319,6 +319,15 @@ void Deck::Print(int columns = 1, bool clear = false) {
     }
 }
 
+// An stack/pile type used for games like war and goldfish
+// that utilized the same 52 cards.
+/*
+class ExtraDeck : public CardContainer
+{
+   
+};
+*/
+
 /*
  ██╗  ██╗ █████╗ ███╗   ██╗██████╗
  ██║  ██║██╔══██╗████╗  ██║██╔══██╗
