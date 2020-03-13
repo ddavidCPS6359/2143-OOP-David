@@ -93,6 +93,13 @@ public:
     bool operator==(const Card &);
     bool operator!=(const Card &);
     bool operator()(const Card &);
+    void setForegroundColor(string color);       // set foreground color of card
+    void setBackgroundColor(string color);      // set background color of card
+    void setColors(string fore,string back);      // set fore and back
+    void setCharacterColor(string color);        // set symbol color 
+    void setNumberColor(string color);          // set number color
+    void setColors(string fore, string back, string symbol, string number);
+    // and any other overloaded convenience methods you want to add.
 };
 
 /**
@@ -186,6 +193,27 @@ bool Card::operator!=(const Card &rhs) {
 bool Card::operator()(const Card &rhs) {
     return (this->rank < rhs.rank);
 }
+
+struct BackColor{
+    string red;
+    string black;
+
+    Color(){
+        red = "&20";
+        black = "&60";
+    }
+};
+
+struct ForeColor{
+
+    string red;
+    string black;
+
+    Color(){
+        red = "&12";
+        black = "&16";
+    }
+};
 
 /*
   ██████╗ █████╗ ██████╗ ██████╗  ██████╗ ██████╗ ███╗   ██╗████████╗ █████╗ ██╗███╗   ██╗███████╗██████╗
