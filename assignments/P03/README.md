@@ -34,7 +34,7 @@
 
 ### Diagram
 
-<img src="" width="400">
+<img src="COVID19UML.png" width="400">
 
 ### Population
 
